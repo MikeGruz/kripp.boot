@@ -1,6 +1,6 @@
 ### This package provides convenience functions for bootstrap resampling of Krippendorff's alpha intercoder reliability statistics.
 
-For more information on Krippendorff's alpha, see the book *Content Analysis: An Introduction to Its Methodology*
+For more information on Krippendorff's alpha, see the book *Content Analysis: An Introduction to Its Methodology*, by Klaus Krippendorff (2003).
 
 *Last updated: 2013-04-06*
 
