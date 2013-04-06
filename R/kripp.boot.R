@@ -6,7 +6,7 @@ kripp.boot <- function(df, raters='rows', probs=c(.025,.975), iter=100, method='
         df <- t(df)
     }
         
-    for (i in seq(1,iter,1)) {
+    for (i in seq(1,iter)) {
         x[i] <- kripp.alpha(df[,sample(ncol(df), size=ncol(df), replace=TRUE)], 
                             method=method)$value
     }
