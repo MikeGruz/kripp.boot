@@ -15,7 +15,7 @@ Mike Gruszczynski
 
 To install this package from the source code available here, download and then run:
 
-`> install.packages("kripp.alpha.tar.gz", repos=NULL, type="source")`
+`> install.packages("kripp_boot-0.1.tar.gz", repos=NULL, type="source")`
 
 *Package will soon be added to CRAN*
 
