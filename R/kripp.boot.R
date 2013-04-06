@@ -1,4 +1,3 @@
-require(irr)
 
 kripp.boot <- function(df, raters='rows', probs=c(.025,.975), iter=100, method='nominal') {
     x <- numeric(iter)
