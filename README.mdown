@@ -17,8 +17,6 @@ To install this package from the source code available here, download and then r
 
 `> install.packages("kripp_boot-0.1.tar.gz", repos=NULL, type="source")`
 
-*Package will soon be added to CRAN*
-
 ### Usage
 
 As this wraps the `kripp.alpha` function in the `irr` package, it functions in much the same way. 
