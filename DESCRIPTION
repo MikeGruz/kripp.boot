@@ -1,0 +1,13 @@
+Package: kripp.boot
+Type: Package
+Title: R wrapper for bootstrap resampling on intercoder reliability data
+Version: 0.1
+Date: 2013-04-06
+Author: Mike Gruszczynski
+Maintainer: Mike Gruszczynski, <mikewgruz@gmail.com>
+Depends: irr
+Description: This package provides convenience functions to perform 
+			 bootstrap resampling on intercoder reliability data,
+             specifically Krippendorff's alpha computations.
+License: BSD
+LazyLoad: yes
