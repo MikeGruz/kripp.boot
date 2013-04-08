@@ -11,9 +11,9 @@ kripp.boot <- function(x, raters='rows', probs=c(.025,.975), iter=100, method='n
         
     for (i in seq(1,iter)) {
         alphas[i] <- kripp.alpha(x[,sample(ncol(x),
-										   size=ncol(x), 
-										   replace=TRUE)], 
-								 method=method)$value
+                                           size=ncol(x), 
+                                           replace=TRUE)], 
+                                 method=method)$value
     }
     
     kripp.ci <- quantile(alphas, probs=probs, na.rm=TRUE)
