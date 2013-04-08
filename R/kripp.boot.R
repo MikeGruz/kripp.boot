@@ -1,7 +1,7 @@
 
 kripp.boot <- function(x, raters='rows', probs=c(.025,.975), iter=100, method='nominal') {
     
-    if (!is.numeric(as.matrix(x))) stop(df, ' contains non-numeric cells')
+    if (!is.numeric(as.matrix(x))) stop(x, ' contains non-numeric cells')
 
     alphas <- numeric(iter)
     
