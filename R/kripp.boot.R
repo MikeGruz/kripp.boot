@@ -1,29 +1,29 @@
 
-kripp.boot <- function(df, raters='rows', probs=c(.025,.975), iter=100, method='nominal') {
+kripp.boot <- function(x, raters='rows', probs=c(.025,.975), iter=100, method='nominal') {
     
-    if (!is.numeric(as.matrix(df))) stop(df, ' contains non-numeric cells')
+    if (!is.numeric(as.matrix(x))) stop(df, ' contains non-numeric cells')
 
-    x <- numeric(iter)
+    alphas <- numeric(iter)
     
     if (raters == 'cols') {
-        df <- t(df)
+        x <- t(x)
     }
         
     for (i in seq(1,iter)) {
-        x[i] <- kripp.alpha(df[,sample(ncol(df), size=ncol(df), 
+        alphas[i] <- kripp.alpha(x[,sample(ncol(x), size=ncol(x), 
 									   replace=TRUE)], 
                             method=method)$value
     }
     
-    kripp.ci <- quantile(x, probs=probs, na.rm=TRUE)
-    boot.stats <- list(mean.alpha=mean(x, na.rm=TRUE), 
+    kripp.ci <- quantile(alphas, probs=probs, na.rm=TRUE)
+    boot.stats <- list(mean.alpha=mean(alphas, na.rm=TRUE), 
                        upper=kripp.ci[2], 
                        lower=kripp.ci[1], 
-                       alphas=x,
-                       raters=nrow(df),
+                       alphas=alphas,
+                       raters=nrow(x),
                        iter=iter,
                        probs=probs,
-                       size=ncol(df))
+                       size=ncol(x))
     class(boot.stats) <- 'kripp.boot'
     return(boot.stats)
 }
