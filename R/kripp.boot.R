@@ -1,13 +1,20 @@
 
-kripp.boot <- function(df, raters='rows', probs=c(.025,.975), iter=100, method='nominal') {
-    x <- numeric(iter)
+kripp.boot <- function(df, raters='rows', probs=c(.025,.975), 
+					   iter=100, method='nominal') {
+    
+	if (!is.numeric(matrix(df))) {
+			stop(df, ' contains non-numeric cells')
+	}		
+
+	x <- numeric(iter)
     
     if (raters == 'cols') {
         df <- t(df)
     }
         
     for (i in seq(1,iter)) {
-        x[i] <- kripp.alpha(df[,sample(ncol(df), size=ncol(df), replace=TRUE)], 
+        x[i] <- kripp.alpha(df[,sample(ncol(df), size=ncol(df), 
+									   replace=TRUE)], 
                             method=method)$value
     }
     
