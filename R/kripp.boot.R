@@ -29,6 +29,7 @@ kripp.boot <- function(x, raters='rows', probs=c(.025,.975), iter=100, method='n
     return(boot.stats)
 }
 
+
 print.kripp.boot <- function(boot.stats) {
     cat("Bootstrapped Krippendorff's Alpha","\n\n")
     cat('Alpha Levels for', boot.stats$raters,'raters,', 
