@@ -7,7 +7,7 @@ kripp.boot <- function(x, raters='rows', probs=c(.025,.975), iter=100, method='n
     
     if (raters == 'cols') x <- t(x)
         
-    for (i in seq(1,iter)) {
+    for (i in 1:iter) {
         alphas[i] <- kripp.alpha(x[,sample(ncol(x),
                                            size=ncol(x), 
                                            replace=TRUE)], 
