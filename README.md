@@ -5,6 +5,7 @@
 ## An R Package for Performing Bootstrap Replicates of Krippendorff's alpha on Intercoder Reliability Data
 
 *Authors: Polina Proutskova and Mike Gruszczynski*
+
 *Maintainer: Mike Gruszczynski*
 
 This function implements Prof. Klaus Krippendorff's algorithm for bootstrapping the Krippendorff's alpha coefficient. It computes confidence values (reliability estimates) for the given probabilities. 
