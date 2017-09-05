@@ -1,4 +1,3 @@
-[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/kripp.boot)](https://cran.r-project.org/package=kripp.boot)
 
 # kripp.boot
 
@@ -14,19 +13,10 @@ Because Krippendorff's alpha has no *a priori* known distribution, deriving conf
 
 ## Installation
 
-To install the package, type the following:
+To install the package, use the `devtools` package to install from Github:
 
 ```
-install.packages("kripp.boot")
-library(kripp.boot)
-```
-
-
-Or you can install the development version from GitHub:
-
-```
-library(devtools)
-install_github("mikegruz/kripp.boot")
+devtools::install_github("mikegruz/kripp.boot")
 library(kripp.boot)
 ```
 
